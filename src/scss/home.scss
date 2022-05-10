@@ -1,0 +1,91 @@
+//====================================================================================================
+.glasses {
+    margin-top: rem(40);
+    margin-bottom: rem(45);
+
+    // .glasses__title
+
+    &__title {
+        margin-top: rem(25);
+        font-size: rem(36);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__wrapper {
+        margin-top: rem(25);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    // .glasses__wrapper
+
+}
+
+.card {
+    width: rem(270);
+    text-align: center;
+    padding: 24px 0px 20px 0px;
+    margin-bottom: rem(25);
+    background: #FFFEFE;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+    // .card__img
+
+    &__img {
+        margin: 35px 0 55px 0;
+    }
+
+    // .card__descr
+
+    &__descr {
+        font-weight: 500;
+    }
+
+    // .card__model
+
+    &__model {
+        margin-bottom: rem(20);
+    }
+
+    // .card__price
+
+    &__price {
+        margin-bottom: rem(25);
+    }
+
+    // .card__favorite
+
+    &__button {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // .card__button
+
+    &__favorite {
+        background-color: #E7E3E3;
+        padding: rem(10);
+    }
+
+    // .card__add
+
+    &__add {
+        display: flex;
+        gap: rem(5);
+        align-items: center;
+        font-size: rem(12);
+        font-weight: 300;
+        text-transform: uppercase;
+        background-color: #000;
+        color: #fff;
+        padding: rem(6);
+
+        svg {
+            width: 20px;
+        }
+    }
+}
+
+//====================================================================================================
