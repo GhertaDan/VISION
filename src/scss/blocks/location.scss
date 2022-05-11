@@ -1,0 +1,43 @@
+.location {
+    padding: rem(55) 0 rem(55) rem(60);
+    // .location__title
+
+    &__title {
+        font-size: rem(36);
+        font-weight: 600;
+        margin-bottom: rem(40);
+    }
+
+    // .location__descr
+
+    &__descr {
+        margin-bottom: rem(20);
+        line-height: rem(27);
+    }
+
+    // .location__name
+
+    &__name {
+        font-size: rem(24);
+        font-weight: 500;
+        margin-bottom: rem(15);
+    }
+
+    &__address,
+    &__contact,
+    &__location {
+        font-size: rem(18);
+        font-weight: 500;
+        letter-spacing: 0.05em;
+    }
+
+    // .location__address
+
+    &__address {}
+
+    &__location {
+        a {
+            color: #6CADF9;
+        }
+    }
+}

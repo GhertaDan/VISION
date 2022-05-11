@@ -8,17 +8,24 @@
     // .footer__container
 
     &__container {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
     }
 
     // .footer__block
 
     &__block {
-        flex-shrink: 2;
-        // &_growed {
-        //     flex-grow: 2;
-        // }
+        // flex-shrink: 2;
+        width: 100%;
+
+        &:first-child {
+            // width: 65%;
+        }
+
+        &:last-child {
+            // width: 35%;
+        }
+
     }
 
     // .footer__title
@@ -61,6 +68,11 @@
     }
 
     &__rule {}
+
+    &__descr {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 //====================================================================================================

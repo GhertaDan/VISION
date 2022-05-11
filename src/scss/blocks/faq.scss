@@ -1,0 +1,39 @@
+.faq {
+    padding: rem(30) 0 rem(77) rem(80);
+    // .faq__title
+
+    &__title {
+        font-size: rem(40);
+        font-weight: 600;
+        text-decoration: underline black 2.5px;
+
+        margin: {
+            top: rem(20);
+            bottom: rem(24);
+        }
+    }
+
+    // .faq__qt
+
+    &__qt {
+        font-size: rem(20);
+        font-weight: 600;
+        margin-bottom: rem(24);
+    }
+
+    // .faq__ans
+
+    &__ans {
+        font-size: rem(18);
+        font-weight: 400;
+        margin-bottom: rem(24);
+
+        &-delivery {
+            margin-bottom: rem(12);
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
