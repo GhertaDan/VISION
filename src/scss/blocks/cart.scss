@@ -1,0 +1,115 @@
+.cart {
+    padding: rem(65) rem(145);
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 3.5fr 1fr 1fr;
+        margin-bottom: rem(10);
+    }
+
+    &__header {
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+        background-color: #FF843F;
+        color: #fff;
+        text-align: center;
+        padding: rem(10) 0 rem(10);
+        margin-bottom: rem(10);
+    }
+
+    &__name {
+        &:first-child {
+            text-align: initial;
+            padding-left: rem(110);
+        }
+
+        &:nth-child(2) {
+            padding-left: rem(57);
+        }
+
+        &:last-child {
+            padding-left: rem(20);
+        }
+    }
+
+    &__item {
+        &-container {
+            display: flex;
+            gap: rem(15);
+
+            padding: {
+                top: rem(12);
+            }
+        }
+
+        &-img {}
+
+        &-name {
+            margin-bottom: rem(30);
+            font-size: rem(18);
+            font-weight: 500;
+        }
+
+        &-price {
+            font-size: rem(14);
+            font-weight: 600;
+            margin-bottom: rem(10);
+        }
+
+        &-remove {
+            button {
+                color: #FB0A0A;
+            }
+        }
+    }
+
+    &__qnt {
+        display: flex;
+        justify-content: center;
+        gap: rem(18);
+
+        button {
+            font-weight: 600;
+        }
+
+        &-number {
+            font-size: rem(18);
+            font-weight: 600;
+            line-height: 137px;
+
+        }
+    }
+
+    &__subtotal {
+        text-align: center;
+        font-weight: 600;
+        line-height: rem(137);
+    }
+
+    &__total {
+        &-wrapper {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+        }
+
+        &-name {
+            font: {
+                size: rem(24);
+                weight: 600;
+            }
+
+            text-transform: uppercase;
+        }
+
+        &-input {
+            border: 1px solid gray;
+        }
+
+        &-box {
+            &:last-child {
+
+                border-top: 5px solid #FF843F;
+            }
+        }
+    }
+}
