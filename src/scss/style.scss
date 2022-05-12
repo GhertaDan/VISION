@@ -147,10 +147,12 @@ body {
 @import "blocks/category.scss";
 @import "blocks/location.scss";
 @import "blocks/faq.scss";
+@import "blocks/cart.scss";
 
 // Подключение стилей отдельных блоков
 @import "header";
 @import "footer";
+@import "libs/swiper.scss";
 
 // Подключение стилей отдельных страниц
 @import "home";

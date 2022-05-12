@@ -15,17 +15,7 @@
     // .footer__block
 
     &__block {
-        // flex-shrink: 2;
         width: 100%;
-
-        &:first-child {
-            // width: 65%;
-        }
-
-        &:last-child {
-            // width: 35%;
-        }
-
     }
 
     // .footer__title
@@ -49,7 +39,17 @@
     // .footer__descr
 
     &__descr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: rem(10);
+
+        div {
+            &:first-child {
+                margin: 0;
+            }
+        }
+
 
         p {
             font-size: rem(15);
@@ -65,14 +65,15 @@
     &__policy {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 30px;
     }
 
-    &__rule {}
-
-    &__descr {
-        display: flex;
-        justify-content: space-between;
+    &__rule {
+        &:first-child {
+            margin-bottom: 20px;
+        }
     }
+
 }
 
 //====================================================================================================

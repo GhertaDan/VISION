@@ -12,14 +12,45 @@
         text-transform: uppercase;
     }
 
+    // .glasses__wrapper
+
     &__wrapper {
         margin-top: rem(25);
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 2fr) 1fr;
     }
 
-    // .glasses__wrapper
 
+}
+
+.swiper-pagination-bullet {
+    background-color: #FCFCFC;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+
+    &-active {
+        background-color: black;
+        border: 3px solid #FCFCFC;
+    }
+}
+
+.swiper-button-prev {
+    left: 50px;
+}
+
+.swiper-button-next {
+    right: 50px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #151515;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 40px;
 }
 
 .card {

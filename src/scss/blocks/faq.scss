@@ -1,5 +1,9 @@
 .faq {
-    padding: rem(30) 0 rem(77) rem(80);
+    padding: {
+        top: rem(30);
+        bottom: rem(77);
+    }
+
     // .faq__title
 
     &__title {
