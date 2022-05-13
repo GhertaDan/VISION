@@ -1,0 +1,42 @@
+.page {
+    background-color: #F6F6F6;
+}
+
+.register {
+    max-width: 1035px;
+    margin: 0 auto;
+    margin-top: rem(110);
+    margin-bottom: rem(190);
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+
+    &__logo {
+        font-weight: 700;
+        font-size: rem(24);
+        line-height: math.div(110, 60);
+        margin-left: rem(31);
+    }
+
+    &__wrapper {
+        background-color: #fff;
+        width: 1035px;
+        height: 650px;
+        border-radius: 10px;
+        padding: rem(70) 0 rem(100) 0;
+    }
+
+    &__name {
+        font-size: rem(24);
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-top: rem(60);
+        margin-left: rem(50);
+    }
+
+    form {
+        label {}
+
+        input {}
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm', {
+"title": "Register"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+            <div class="page__container">
+                <div class="register">
+                    <div class="register__wrapper">
+                        <div class="register__logo">
+                            <img src="img/logo 1.png" alt="">
+                            VISION
+                        </div>
+                        <div class="register__name">Register</div>
+                        <form action="">
+                            <label for="">Name</label>
+                            <input type="text">
+                            <label for="">Email</label>
+                            <input type="text">
+                            <label for="">Phone</label>
+                            <input type="password">
+                            <label for="">Password</label>
+                            <input type="password">
+                            <label for="">Confirm Password</label>
+                        </form>
+                    </div>
+                    <img src="img/register.png" alt="" class="register__img">
+                </div>
+            </div>
+        </main>
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
