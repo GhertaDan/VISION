@@ -1,0 +1,95 @@
+.page {
+    background-color: #F6F6F6;
+}
+
+.login {
+    max-width: 1035px;
+    margin: 0 auto;
+    margin-top: rem(110);
+    margin-bottom: rem(190);
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+
+    &__logo {
+        font-weight: 700;
+        font-size: rem(24);
+        line-height: math.div(110, 60);
+        margin-left: rem(31);
+    }
+
+    &__wrapper {
+        background-color: #fff;
+        width: 1035px;
+        height: 650px;
+        border-radius: 10px;
+        padding: rem(70) 0 rem(100) 0;
+    }
+
+    p {
+        margin-top: rem(35);
+        text-align: center;
+        color: #A6A0A0;
+        font-weight: 400;
+    }
+
+    a {
+        color: #0666F7;
+    }
+
+    &__descr {
+        margin-left: rem(51);
+        color: #A6A0A0;
+        font-weight: 400;
+    }
+
+    &__name {
+        font-size: rem(24);
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-top: rem(120);
+        margin-left: rem(50);
+        margin-bottom: rem(25);
+    }
+
+    &__btn {
+        display: block;
+        margin: 55px auto 0 auto;
+        color: #fff;
+        background: linear-gradient(180deg, rgba(12, 218, 246, 0.72) 0%, rgba(6, 102, 247, 0.64) 100%);
+        box-shadow: 0px 10px 20px rgba(86, 196, 249, 0.3);
+        border-radius: 15px;
+        width: 400px;
+        padding: rem(8) 0;
+    }
+
+    form {
+
+        .form-group {
+            width: 520px;
+            padding-left: rem(51);
+            margin-top: 30px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    border-bottom: 1px solid #1687F7;
+                    color: #57C3F9;
+                    width: 415px;
+                    padding: 8px 0 4px 0;
+
+                    font: {
+                        size: rem(16);
+                        weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+input[type="password"] {
+    font-family: Verdana;
+}
