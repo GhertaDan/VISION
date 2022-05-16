@@ -15,20 +15,35 @@
                             <img src="img/logo 1.png" alt="">
                             VISION
                         </div>
-                        <div class="register__name">Register</div>
-                        <form action="">
-                            <label for="">Name</label>
-                            <input type="text">
-                            <label for="">Email</label>
-                            <input type="text">
-                            <label for="">Phone</label>
-                            <input type="password">
-                            <label for="">Password</label>
-                            <input type="password">
-                            <label for="">Confirm Password</label>
+                        <form role="form" onsubmit="signUp(event);">
+                            <div class="register__name">Register</div>
+                            <div class="form-group">
+                                <div>
+                                    <label for="">Name</label>
+                                    <input type="text" name="name" id="name" required>
+                                </div>
+                                <div>
+                                    <label for="">Email</label>
+                                    <input type="text" name="email" id="email" required>
+                                </div>
+                                <div>
+                                    <label for="">Phone</label>
+                                    <input type="phone" name="phone" id="phone" required>
+                                </div>
+                                <div>
+                                    <label for="">Password</label>
+                                    <input type="password" name="pass" id="pass" required>
+                                </div>
+                                <div>
+                                    <label for="">Confirm Password</label>
+                                    <input type="password" name="confirmPass" id="confirmPass" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="register__btn">Sign in</button>
                         </form>
-                    </div>
-                    <img src="img/register.png" alt="" class="register__img">
+                        <p>Already have an account? <a href="#">Sign in</a>
+                        </p>
+                    </div> <img src="img/register.png" alt="" class="register__img">
                 </div>
             </div>
         </main>

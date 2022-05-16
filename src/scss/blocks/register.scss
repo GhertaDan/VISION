@@ -24,6 +24,17 @@
         height: 650px;
         border-radius: 10px;
         padding: rem(70) 0 rem(100) 0;
+
+        p {
+            margin-top: 40px;
+            text-align: center;
+            color: #A6A0A0;
+            font-weight: 400;
+
+            a {
+                color: #0666F7;
+            }
+        }
     }
 
     &__name {
@@ -32,11 +43,54 @@
         text-transform: uppercase;
         margin-top: rem(60);
         margin-left: rem(50);
+        margin-bottom: rem(25);
+    }
+
+    &__btn {
+        display: block;
+        margin: 55px auto 0 auto;
+        color: white;
+        background: linear-gradient(269.46deg, #A36DA2 0.24%, #59A0C5 96.9%);
+        box-shadow: 0px 10px 20px rgba(86, 196, 249, 0.3);
+        border-radius: 15px;
+        width: 400px;
+        padding: rem(8) rem(155);
     }
 
     form {
-        label {}
+        width: 520px;
+        margin-right: 0;
+    }
 
-        input {}
+    .form-group {
+        padding-right: 50px;
+
+        div {
+            margin-bottom: 12px;
+        }
+
+        input {
+            border-bottom: 1px solid #1687F7;
+            color: #57C3F9;
+
+            font: {
+                size: rem(16);
+                weight: 500;
+            }
+
+            width: 270px;
+            float: right;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        label {
+            display: inline-block;
+            margin-top: 5px;
+            text-align: right;
+            width: rem(160);
+        }
     }
 }
