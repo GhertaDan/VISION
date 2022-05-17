@@ -6,8 +6,12 @@
     // .glasses__title
 
     &__title {
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
+
         margin-top: rem(25);
-        font-size: rem(36);
+        @include adaptiveValue("font-size", 36, 24);
         font-weight: 700;
         text-transform: uppercase;
     }
@@ -57,12 +61,12 @@
     &:nth-child(2) {
         div {
             position: absolute;
-            @include adaptiveValue("top", 260, 10);
+            @include adaptiveValue("top", 260, 30);
             @include adaptiveValue("left", 50, 30);
             text-align: center;
 
             p {
-                @include adaptiveValue("font-size", 36, 20);
+                @include adaptiveValue("font-size", 36, 12);
                 color: black;
                 text-transform: uppercase;
                 font-family: Metrophobic;
@@ -72,7 +76,7 @@
                 font-family: Pacifico;
                 color: #EF3A7F;
                 text-transform: uppercase;
-                @include adaptiveValue("font-size", 36, 20);
+                @include adaptiveValue("font-size", 36, 10);
             }
         }
     }
@@ -155,6 +159,10 @@
         height: 214px;
         display: flex;
         align-items: center;
+    }
+
+    &__icon {
+        cursor: pointer;
     }
 
     // .card__descr

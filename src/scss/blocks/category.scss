@@ -20,6 +20,10 @@
         margin-top: rem(36);
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
     }
 
     // .category__block
@@ -29,7 +33,8 @@
         height: rem(200);
         padding: 0 rem(12);
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
+        @include adaptiveValue("gap", 85, 30);
         align-items: center;
         background: #FFFEFE;
         box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);

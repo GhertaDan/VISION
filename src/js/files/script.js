@@ -7,6 +7,20 @@ import {
     flsModules
 } from "./modules.js";
 
+let favorite = document.querySelectorAll('.card__icon');
+console.log(favorite);
+
+favorite.forEach(el => {
+    el.addEventListener("click", e => {
+        if (e.target.src == `http://${window.location.host}/img/icons/favorite.png`) {
+            e.target.src = `http://${window.location.host}/img/icons/favorite_active.png`;
+        } else if (e.target.src == `http://${window.location.host}/img/icons/favorite_active.png`) {
+            e.target.src = `http://${window.location.host}/img/icons/favorite.png`;
+        }
+        e.preventDefault()
+    })
+});
+
 if (window.location.href.includes('register')) {
     let users = [];
     let form = document.getElementById("form");
@@ -25,6 +39,7 @@ if (window.location.href.includes('register')) {
         else {
             users.push(user)
             localStorage.setItem('users', JSON.stringify(users));
+            console.log(user);
         }
         e.preventDefault();
     })
