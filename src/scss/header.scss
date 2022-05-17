@@ -16,13 +16,17 @@
 
 	&__logo {
 		font-weight: 700;
-		font-size: rem(24);
+		@include adaptiveValue("font-size", 24, 18);
 		line-height: math.div(110, 60);
 	}
 
 	// .header__list
 
 	&__list {
+		@media (max-width: $mobile) {
+			display: none;
+		}
+
 		display: flex;
 		justify-content: space-between;
 		gap: 20px;
@@ -53,16 +57,19 @@
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
+
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
+		flex: 0 0 30px;
 		width: rem(30);
 		height: rem(18);
 		cursor: pointer;
 		z-index: 5;
+
 		span,
 		&::before,
 		&::after {
@@ -74,31 +81,33 @@
 			height: rem(2);
 			background-color: #000;
 		}
+
 		&::before {
 			top: 0;
 		}
+
 		&::after {
 			bottom: 0;
 		}
+
 		span {
 			top: calc(50% - rem(1));
 		}
+
 		.menu-open & {
 			span {
-				width: 0;
+				transform: scale(0);
 			}
-			&::before,
-			&::after {
-			}
+
 			&::before {
-				top: calc(50% - rem(1));
 				transform: rotate(-45deg);
+				top: calc(50% - rem(1));
 			}
+
 			&::after {
-				bottom: calc(50% - rem(1));
 				transform: rotate(45deg);
+				bottom: calc(50% - rem(1));
 			}
 		}
 	}
 }
-*/

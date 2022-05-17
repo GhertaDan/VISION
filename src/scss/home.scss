@@ -17,10 +17,97 @@
     &__wrapper {
         margin-top: rem(25);
         display: grid;
-        grid-template-columns: repeat(3, 2fr) 1fr;
+        column-gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        justify-items: center;
     }
 
 
+}
+
+.swiper-slide {
+    img {
+        width: 100%;
+        position: relative;
+    }
+
+    &:first-child {
+        h1 {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            @include adaptiveValue("font-size", 40, 16);
+            font-weight: 700;
+            color: #fff;
+        }
+
+        h3 {
+            position: absolute;
+            @include adaptiveValue("top", 90, 70);
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            @include adaptiveValue("font-size", 36, 14);
+            font-weight: 700;
+
+        }
+    }
+
+    &:nth-child(2) {
+        div {
+            position: absolute;
+            @include adaptiveValue("top", 260, 10);
+            @include adaptiveValue("left", 50, 30);
+            text-align: center;
+
+            p {
+                @include adaptiveValue("font-size", 36, 20);
+                color: black;
+                text-transform: uppercase;
+                font-family: Metrophobic;
+            }
+
+            span {
+                font-family: Pacifico;
+                color: #EF3A7F;
+                text-transform: uppercase;
+                @include adaptiveValue("font-size", 36, 20);
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        #logo {
+            position: absolute;
+            top: 0;
+            @include adaptiveValue("right", 70, 30);
+            @include adaptiveValue("width", 160, 60);
+        }
+    }
+
+    &:last-child {
+        div {
+            position: absolute;
+            @include adaptiveValue("bottom", 270, 10);
+            left: 60px;
+            color: #fff;
+
+            h3 {
+                text-transform: uppercase;
+                font-family: Mitr;
+                @include adaptiveValue("font-size", 36, 14);
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                text-transform: uppercase;
+                font-family: Mitr;
+                @include adaptiveValue("font-size", 48, 20);
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
 
 .swiper-pagination-bullet {
@@ -36,11 +123,12 @@
 }
 
 .swiper-button-prev {
-    left: 50px;
+    @include adaptiveValue("left", 50, 25);
 }
 
 .swiper-button-next {
-    right: 50px;
+    @include adaptiveValue("right", 50, 25);
+
 }
 
 .swiper-button-prev,
@@ -50,7 +138,7 @@
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
-    font-size: 40px;
+    @include adaptiveValue("font-size", 40, 20);
 }
 
 .card {

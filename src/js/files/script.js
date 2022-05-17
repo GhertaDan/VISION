@@ -7,39 +7,24 @@ import {
     flsModules
 } from "./modules.js";
 
-// const signUp = e => {
-//     let formData = {
-//         name: document.getElementById('name').value,
-//         email: document.getElementById('email').value,
-//         phone: document.getElementById('phone').value,
-//         pass: document.getElementById('pass').value,
-//         confirmPass: document.getElementById('confirmPass').value,
-//     }
-//     localStorage.setItem('formData', JSON.stringify(formData));
-//     console.log(localStorage.getItem('formData'));
-//     e.preventDefault();
-// localStorage.getItem('')
-// }
-
 if (window.location.href.includes('register')) {
     let users = [];
     let form = document.getElementById("form");
     form.addEventListener('submit', e => {
-        if (localStorage.getItem('formData')) {
-            users.push(JSON.parse(localStorage.getItem('formData')))
+        if (localStorage.getItem('user')) {
+            users.push(JSON.parse(localStorage.getItem('user')))
         }
-        let formData = {
+        let user = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
             phone: document.getElementById('phone').value,
             pass: document.getElementById('pass').value,
             confirmPass: document.getElementById('confirmPass').value,
         }
-        if (formData.pass != formData.confirmPass) alert('parola gresita')
+        if (user.pass != user.confirmPass) alert('parola gresita')
         else {
-            users.push(formData)
-            localStorage.setItem('formData', JSON.stringify(users));
-            console.log(localStorage.getItem('formData'));
+            users.push(user)
+            localStorage.setItem('users', JSON.stringify(users));
         }
         e.preventDefault();
     })
@@ -54,10 +39,19 @@ if (window.location.href.includes('login')) {
             email: document.getElementById('emailLogin').value,
             pass: document.getElementById('passLogin').value
         }
-        console.log(users);
-        let filtered = users.filter(el => el.email == formData.email && el.pass == formData.pass)
-        users.filter(el => console.log(Object(el)))
-        // console.log(filtered);
+        let users = JSON.parse(localStorage.getItem("users"));
+        let user = users.find((el) => el.email === formData.email && el.pass === formData.pass);
+        if (user) {
+            window.location.href = 'home.html';
+        }
         e.preventDefault()
     })
 }
+
+//? let users = JSON.parse(localStorage.getItem("users"));
+//? let user = users.find(
+//?     (el) => el.email === this.email && el.password === this.password
+//? );
+//? if (user) {
+//?     console.log("success");
+//? }
