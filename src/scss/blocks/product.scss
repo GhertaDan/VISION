@@ -123,12 +123,26 @@
             width: 60px;
             height: 60px;
             box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
-            padding: 22px 7px;
+            // padding: 22px 7px;
+            cursor: pointer;
+            position: relative;
 
             img {
                 width: 100%;
+                height: 100%;
             }
 
+        }
+
+        &-abs {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            padding: 22px 7px;
+
+            img {
+                object-fit: scale-down;
+            }
         }
     }
 }
