@@ -117,3 +117,22 @@
 		}
 	}
 }
+
+.menu-open {
+	.header__list {
+		display: block;
+		position: absolute;
+		z-index: 99;
+		width: 100%;
+		background-color: #fff;
+		top: 80px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		margin: 0 auto;
+
+		li {
+			margin-bottom: 10px;
+		}
+	}
+}

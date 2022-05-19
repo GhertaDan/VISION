@@ -12,6 +12,13 @@
         column-gap: 80px;
     }
 
+    &__block {
+        &-img {
+            width: rem(300);
+
+        }
+    }
+
     &__name {
         font-size: rem(36);
         font-weight: 500;
@@ -52,7 +59,7 @@
             @include adaptiveValue("width", 770, 500);
             margin-top: 25px;
             line-height: 18px;
-            font-weight: 400;
+            font-weight: 500;
             font-size: rem(14);
         }
     }
@@ -61,16 +68,37 @@
         margin-top: 20px;
         display: flex;
         gap: 60px;
-        font-weight: 400;
+        font-weight: 500;
         font-size: rem(18);
     }
 
     &__info {
-        margin-top: 22px;
+        margin-top: 32px;
+
+        &-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        }
+
+        &-subtitle {
+            font-size: rem(18);
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        &-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 40px;
+        }
 
         &-title {
             font-size: rem(24);
             font-weight: 500;
+        }
+
+        &-text {
+            line-height: 21px;
         }
     }
 
