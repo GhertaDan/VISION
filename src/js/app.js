@@ -193,4 +193,12 @@ import * as flsScroll from "./files/scroll/scroll.js";
 /* Подключаем файлы со своим кодом */
 import "./files/script.js";
 import "./files/product.js";
+import "./files/home.js";
+import "./files/cart.js";
+import "./files/login.js";
+import "./files/register.js";
+
+// if (window.location.href.includes('product.html')) {
+//     import "./files/product.js"
+// };
 //============================================================================================================================================================================================================================================
