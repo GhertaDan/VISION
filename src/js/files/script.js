@@ -13,8 +13,6 @@
 
 
 let favorite = document.querySelectorAll('.card__icon');
-console.log(favorite);
-
 favorite.forEach(el => {
     el.addEventListener("click", e => {
         if (e.target.src == `http://${window.location.host}/img/icons/favorite.png`) {
@@ -25,3 +23,5 @@ favorite.forEach(el => {
         e.preventDefault()
     })
 });
+
+

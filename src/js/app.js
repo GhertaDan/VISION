@@ -197,6 +197,7 @@ import "./files/home.js";
 import "./files/cart.js";
 import "./files/login.js";
 import "./files/register.js";
+import "./files/profile.js";
 
 // if (window.location.href.includes('product.html')) {
 //     import "./files/product.js"

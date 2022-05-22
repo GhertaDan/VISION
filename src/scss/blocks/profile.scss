@@ -1,0 +1,66 @@
+.profile {
+    margin: 45px 0 155px 0;
+
+    &__info {
+        margin-bottom: 45px;
+        display: flex;
+        align-items: flex-end;
+        gap: 50px;
+
+        img {
+            margin-right: 70px;
+        }
+
+        .btn-edit {
+            font-size: rem(18);
+            font-weight: 500;
+            padding: 10px 60px;
+            border: 1px solid #000;
+            border-radius: 50px;
+        }
+
+        .btn-logout {
+            font-size: rem(18);
+            font-weight: 500;
+            padding: 10px 46px;
+            color: #FB0A0A;
+            border: 1px solid #FB0A0A;
+            border-radius: 50px;
+        }
+    }
+
+
+    &__btn {
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        text-align: left;
+        font-size: rem(24);
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    &__block {
+        width: 50%;
+
+        &:first-child {
+            margin-top: 20px;
+        }
+
+        &:nth-child(2) {
+            height: 400px;
+            border-left: 3px solid #000;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+
+    }
+
+    &__content {
+        border-top: 2px solid #000;
+    }
+}

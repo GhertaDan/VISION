@@ -40,11 +40,13 @@ if (window.location.href.includes('product.html')) {
     addCart.addEventListener("click", (e, idx) => {
         const cartItem = {
             name: document.getElementById("prodName").textContent,
-            price: document.getElementById("prodPrice").textContent,
+            price: document.getElementById("prodPrice").textContent.replace("$", "").trim(),
             img: document.getElementById("prod-img").src,
             count: document.querySelector(".product__qnt-number").textContent,
+            subtotal: "",
             id: idx
         }
+        cartItem.subtotal = (cartItem.price * cartItem.count).toFixed(2)
         cart.push(cartItem);
         localStorage.setItem("cart", JSON.stringify(cart));
     })

@@ -28,8 +28,18 @@
 
     // .category__block
 
+    @media (max-width:$mobileSmall) {
+        .category {
+            &__block {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    }
+
     &__block {
-        width: rem(560);
+        @include adaptiveValue("width", 560, 410);
         height: rem(200);
         padding: 0 rem(12);
         display: flex;

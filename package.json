@@ -71,6 +71,7 @@
 	},
 	"dependencies": {
 		"simplebar": "latest",
+		"sweetalert2": "^11.4.14",
 		"yarn": "^1.22.18"
 	}
 }

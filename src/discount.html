@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/_head.htm',{
+@@include('html/_head.htm', {
 "title": "Cart"
 })
 
@@ -8,10 +8,9 @@
     <div class="wrapper">
         @@include('html/_header.htm',{})
         <main class="page">
-            <div class="page__container" id="pageContainer">
+            <div class="page__container">
                 <div class="cart__container">
-                    <div class="cart" id="cart">
-                        <h2 class="cart__title">Your orders</h2>
+                    <div class="cart">
                         <div class="cart__header">
                             <div class="cart__name">Items</div>
                             <div class="cart__name">Quantity</div>
@@ -111,7 +110,7 @@
                         </div>
                         <div class="cart__total">
                             <div class="cart__total-wrapper">
-                                <div class="cart__total-box-discount">
+                                <div class="cart__total-box">
                                     <form action="" class="cart__total-form">
                                         <label for="" class="cart__total-name">Discount</label>
                                         <input type="text" class="cart__total-input" value="BR3886T">
@@ -152,81 +151,15 @@
                                     <div></div>
                                     <button class="cart__total-checkout">Checkout</button>
                                 </div>
+
                             </div>
                         </div>
-                        <div class="cart__payment">
-                            <div class="cart__payment-method">PAYMENT METHOD</div>
-                            <label class="payment-container">
-                                Digital payment
-                                <input type="radio" name="payment" checked="checked" class="cart__payment-type">
-                                <span class="checkmark"></span>
-                            </label>
-
-                            <label class="payment-container">
-                                Cash on payment
-                                <input type="radio" name="payment" class="cart__payment-type">
-                                <span class="checkmark"></span>
-                            </label>
-                        </div>
-                        <div class="cart__order-btn">Place order</div>
                     </div>
-                </div>
-                <div class="side-menu" id="sideMenu">
-                    <h1 class="side-menu__title">Billing details</h1>
-                    <div class="side-menu__details">Please fill the details carefully.</div>
-                    <form action="" class="side-menu__form" style="display: flex; flex-direction: column;">
-                        <div class="side-menu__wrapper">
-                            <div>
-                                <label>FirstName*</label>
-                                <input type="text" value="UME">
-                            </div>
-                            <div>
-                                <label for="">Lastname*</label>
-                                <input type="text" value="DAKI">
-                            </div>
-                            <div>
-                                <label for="">Country/region*</label>
-                                <input type="text" value="Nepal">
-                            </div>
-                            <div>
-                                <label for="">state/zone*</label>
-                                <input type="text" value="Bagmati">
-                            </div>
-                            <div>
-                                <label for="">Town/city*</label>
-                                <input type="text" value="Kathmandu">
-                            </div>
-                            <div>
-                                <label for="">contact*</label>
-                                <input type="text" value="9873098712">
-                            </div>
-                        </div>
-
-                        <div class="side-menu__detail">
-                            <label for="">street address</label>
-                            <input type="text" value="Softwarica Block-E, Dillibazar">
-                        </div>
-                        <div class="side-menu__detail">
-                            <label for="">Email*</label>
-                            <input type="text" value="vision_demo@gmail.com">
-                        </div>
-                    </form>
-                    <label for="" class="terms-container">
-                        <input type="checkbox" name="">Terms and Conditions
-                    </label>
-
-                    <div class="side-menu__policy">
-                        Please go through our company policy in FAQ. Our company thoroughly checksand is strict on
-                        claims regading returns and exchange. Goods cannot be resold. If you agree these conditions
-                        please tick out the checkbox.
-                    </div>
-                    <span class="side-menu__link">Our Policy</span>
                 </div>
             </div>
         </main>
         @@include('html/_footer.htm',{})
     </div>
-    @@include('html/_popup.htm',{})
     @@include('html/_js.htm',{})
 </body>
 
