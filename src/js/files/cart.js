@@ -110,12 +110,14 @@ if (window.location.href.includes('cart.html')) {
 	const cartTotalCheckout = document.querySelector(".cart__total-checkout");
 
 	cartTotalCheckout.addEventListener('click', () => {
-		cart.classList.toggle("page-active")
-		pageContainer.classList.toggle("extended")
-		sideMenu.classList.toggle("side-menu_active")
+		// cart.classList.add("page-active")
+		// pageContainer.classList.add("extended")
+		sideMenu.classList.add("side-menu_active")
+		document.body.classList.add("checkout-open")
+		document.querySelector(".overlay").classList.add("block")
 	})
 
-	const cartOrderBtn = document.querySelector(".cart__order-btn");
+	const cartOrderBtn = document.querySelector(".side-menu__btn");
 
 	cartOrderBtn.addEventListener("click", () => {
 		Swal.fire({
@@ -124,5 +126,14 @@ if (window.location.href.includes('cart.html')) {
 			confirmButtonText: 'SHOW MORE!'
 		})
 	})
+
+	let closeBtn = document.getElementById("closeButton");
+	closeBtn.addEventListener("click", () => {
+		sideMenu.classList.remove("side-menu_active")
+		document.body.classList.remove("checkout-open")
+		document.querySelector(".overlay").classList.remove("block")
+	})
+
+
 }
 import Swal from 'sweetalert2';
