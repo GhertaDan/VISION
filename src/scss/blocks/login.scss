@@ -7,6 +7,25 @@
     border-radius: 10px;
     display: flex;
 
+    @media (max-width:$tablet) {
+        &__logo {
+            text-align: center;
+        }
+
+        &__name {
+            text-align: center;
+        }
+
+        &__descr {
+            text-align: center;
+        }
+
+        .form-group {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
     &__logo {
         font-weight: 700;
         font-size: rem(24);
@@ -59,8 +78,12 @@
         padding: rem(8) 0;
     }
 
-    form {
+    #formLogin {
+        display: block;
+        margin: 0 auto;
+    }
 
+    form {
         .form-group {
             width: 520px;
             padding-left: rem(51);

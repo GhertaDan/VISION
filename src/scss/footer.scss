@@ -9,15 +9,9 @@
 
     &__container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        // grid-template-columns: repeat(auto-fit, minmax(550px, 3fr));
-        // column-gap: 20px;
-
-        @media (max-width: 1129px) {
-            column-gap: 20px;
-            max-width: 720px;
-            margin: 0;
-        }
+        // grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(550px, 3fr));
+        column-gap: 20px;
     }
 
     // .footer__block
@@ -25,9 +19,9 @@
     &__block {
         width: 100%;
 
-        &-long {
-            grid-column: 1/3;
-        }
+        // &-long {
+        //     grid-column: 1/3;
+        // }
     }
 
     // .footer__title

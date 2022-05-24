@@ -7,7 +7,7 @@
     // .faq__title
 
     &__title {
-        font-size: rem(40);
+        @include adaptiveValue("font-size", 40, 26);
         font-weight: 600;
         text-decoration: underline black 2.5px;
 
@@ -20,7 +20,7 @@
     // .faq__qt
 
     &__qt {
-        font-size: rem(20);
+        @include adaptiveValue("font-size", 20, 18);
         font-weight: 600;
         margin-bottom: rem(24);
     }
@@ -28,7 +28,7 @@
     // .faq__ans
 
     &__ans {
-        font-size: rem(18);
+        @include adaptiveValue("font-size", 18, 16);
         font-weight: 400;
         margin-bottom: rem(24);
 

@@ -4,7 +4,7 @@
     &__info {
         margin-bottom: 45px;
         display: flex;
-        align-items: flex-end;
+        align-items: flex-start;
         gap: 50px;
 
         img {
@@ -27,8 +27,29 @@
             border: 1px solid #FB0A0A;
             border-radius: 50px;
         }
-    }
 
+        &-username {
+            font-size: rem(36);
+            font-weight: 400;
+        }
+
+        &-date {
+            margin-bottom: 10px;
+
+            label {}
+
+            input[type="text"]:disabled {
+                color: #000;
+            }
+
+        }
+
+        &-wrapper {
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 
     &__btn {
         margin-bottom: 50px;
@@ -62,5 +83,44 @@
 
     &__content {
         border-top: 2px solid #000;
+    }
+
+    &__content {
+        padding-left: 20px;
+    }
+
+    .item {
+        margin-top: 30px;
+
+        &__wrapper {
+            display: flex;
+            gap: 30px;
+        }
+
+        &__img {
+            width: 200px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__box {}
+
+        &__name {
+            font-size: rem(18);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        &__price {
+            font-size: rem(14);
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        &__date {
+            font-weight: 300;
+        }
     }
 }

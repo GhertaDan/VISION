@@ -22,28 +22,31 @@ if (window.location.href.includes('cart.html')) {
 										<img src="${el.img}" alt="">
 									</div>
 									<div class="cart__item-box">
-										<div class="cart__item-name">
-											<h3>${el.name}</h3>
+										<div class="cart__item-description">
+											<div class="cart__item-name">
+												<h3>${el.name}</h3>
+											</div>
+											<div class="cart__item-price">
+												<p>$${el.price}</p>
+											</div>
+											<div class="cart__item-remove">
+												<button class="btn btn-remove" onclick="">Remove</button>
+											</div>
 										</div>
-										<div class="cart__item-price">
-											<p>$${el.price}</p>
+										<div class="cart__qnt">
+											<div class="cart__qnt-number">
+												 ${el.count}
+											</div>
 										</div>
-										<div class="cart__item-remove">
-											<button class="btn btn-remove" onclick="">Remove</button>
+										<div class="cart__subtotal">
+											$${el.subtotal}
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="cart__qnt">
-								<div class="cart__qnt-number">
-									${el.count}
-								</div>
-							</div>
-							<div class="cart__subtotal">
-								$${el.subtotal}
-							</div>
+
 						</div>
-	
+
 						`;
 			render.innerHTML += item;
 		});
@@ -90,19 +93,19 @@ if (window.location.href.includes('cart.html')) {
 	// 	})
 	// });
 	let cartItems = document.querySelectorAll(".cart__wrapper");
-	cartItems.forEach((el, idx) => {
+	// cartItems.forEach((el, idx) => {
 
-		el.childNodes[1].childNodes[1].childNodes[3].childNodes[5].children[0].addEventListener("click", e => {
-			let cart = JSON.parse(localStorage.getItem('cart')) || [];
-			cart.splice(idx, 1);
-			console.log(cart);
-			localStorage.setItem('cart', JSON.stringify(cart))
-			cartItems = document.querySelectorAll(".cart__wrapper");
-			render.innerHTML = '';
-			renderCart();
-			location.reload();
-		})
-	})
+	// 	el.childNodes[1].childNodes[1].childNodes[3].childNodes[5].children[0].addEventListener("click", e => {
+	// 		let cart = JSON.parse(localStorage.getItem('cart')) || [];
+	// 		cart.splice(idx, 1);
+	// 		console.log(cart);
+	// 		localStorage.setItem('cart', JSON.stringify(cart))
+	// 		cartItems = document.querySelectorAll(".cart__wrapper");
+	// 		render.innerHTML = '';
+	// 		renderCart();
+	// 		location.reload();
+	// 	})
+	// })
 
 	const cart = document.getElementById("cart");
 	const pageContainer = document.getElementById("pageContainer");
