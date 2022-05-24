@@ -61,6 +61,7 @@
         font-weight: 600;
         text-transform: uppercase;
         margin-bottom: 5px;
+        margin-left: 20px;
     }
 
     &__block {
@@ -83,9 +84,6 @@
 
     &__content {
         border-top: 2px solid #000;
-    }
-
-    &__content {
         padding-left: 20px;
     }
 
@@ -121,6 +119,62 @@
 
         &__date {
             font-weight: 300;
+        }
+    }
+}
+
+.wish {
+
+    // .wish__wrapper
+
+    &__wrapper {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    // .wish__item
+
+    &__item {}
+
+    // .wish__name
+
+    &__name {
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: rem(18);
+    }
+
+    // .wish__img
+
+    &__img {
+        width: 200px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    // .wish__box
+
+    &__box {}
+
+    // .wish__price
+
+    &__price {
+        font-size: rem(14);
+        font-weight: 500;
+    }
+
+    // .wish__cart
+
+    &__cart {
+        flex: 1 1 auto;
+
+        svg {
+            float: right;
+            cursor: pointer;
         }
     }
 }

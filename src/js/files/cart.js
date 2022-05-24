@@ -14,7 +14,7 @@ if (window.location.href.includes('cart.html')) {
 	function renderCart() {
 		render.innerHTML = '';
 		let cart = JSON.parse(localStorage.getItem('cart')) || [];
-		cart.forEach((el, idx) => {
+		cart.forEach((el) => {
 			let item = `<div class="cart__wrapper">
 							<div class="cart__item">
 								<div class="cart__item-container">
@@ -93,19 +93,21 @@ if (window.location.href.includes('cart.html')) {
 	// 	})
 	// });
 	let cartItems = document.querySelectorAll(".cart__wrapper");
-	// cartItems.forEach((el, idx) => {
+	cartItems.forEach((el, idx) => {
+		// console.log(el.childNodes[1].childNodes[1].childNodes[3].childNodes[1].childNodes[5].childNodes[1]);
 
-	// 	el.childNodes[1].childNodes[1].childNodes[3].childNodes[5].children[0].addEventListener("click", e => {
-	// 		let cart = JSON.parse(localStorage.getItem('cart')) || [];
-	// 		cart.splice(idx, 1);
-	// 		console.log(cart);
-	// 		localStorage.setItem('cart', JSON.stringify(cart))
-	// 		cartItems = document.querySelectorAll(".cart__wrapper");
-	// 		render.innerHTML = '';
-	// 		renderCart();
-	// 		location.reload();
-	// 	})
-	// })
+		// console.log(el.childNodes[1].childNodes[1].childNodes[3].childNodes[1].childNodes[5].childNodes[1]);
+		el.childNodes[1].childNodes[1].childNodes[3].childNodes[1].childNodes[5].childNodes[1].addEventListener("click", e => {
+			let cart = JSON.parse(localStorage.getItem('cart')) || [];
+			cart.splice(idx, 1);
+			console.log(cart);
+			localStorage.setItem('cart', JSON.stringify(cart))
+			cartItems = document.querySelectorAll(".cart__wrapper");
+			render.innerHTML = '';
+			renderCart();
+			location.reload();
+		})
+	})
 
 	const cart = document.getElementById("cart");
 	const pageContainer = document.getElementById("pageContainer");
@@ -137,6 +139,8 @@ if (window.location.href.includes('cart.html')) {
 		document.querySelector(".overlay").classList.remove("block")
 	})
 
+	let arr = [1, 2, 3, "abc"];
+	console.log(JSON.stringify(arr));
 
 }
 import Swal from 'sweetalert2';
