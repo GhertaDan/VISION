@@ -44,14 +44,14 @@
         flex: 1 1 auto;
         padding-left: 110px;
         text-align: left;
-
-        @media (max-width:$tablet) {
-            display: none;
-        }
     }
 
     &__quantity {
         flex: 0 0 210px;
+
+        @media (max-width:$tablet) {
+            display: none;
+        }
 
         @media (max-width:$mobile) {
             display: none;
@@ -60,6 +60,10 @@
 
     &__name {
         flex: 0 0 210px;
+
+        @media (max-width:$tablet) {
+            display: none;
+        }
     }
 
     &__item {
@@ -110,6 +114,11 @@
         }
 
         &-remove {
+            @media (max-width:$tablet) {
+                text-align: right;
+                padding-right: 10px;
+            }
+
             button {
                 color: #FB0A0A;
             }
@@ -121,14 +130,17 @@
     }
 
     &__qnt {
-        flex: 0 0 200px;
         width: min-content;
+
 
         &-number {
             @include adaptiveValue("font-size", 18, 14);
             font-weight: 500;
-            // line-height: 137px;
 
+            // line-height: 137px;
+            @media (max-width:$tablet) {
+                margin-top: -26px;
+            }
         }
     }
 
@@ -137,9 +149,7 @@
         font-weight: 500;
         // line-height: rem(137);
 
-        @media (max-width:1176px) {
-            // max-width: 125px;
-        }
+
     }
 
     &__total {
@@ -161,11 +171,11 @@
 
 
         &-wrapper {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
 
             @media (max-width:$mobile) {
-                display: flex;
                 flex-direction: column;
                 gap: 24px;
                 text-align: center;

@@ -41,12 +41,13 @@
     // .category__block
 
     &__block {
-        @include adaptiveValue("width", 560, 410);
+        // @include adaptiveValue("width", 560, 410);
+        width: 560px;
         // height: max-content;
         padding: 0 rem(12);
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
         @include adaptiveValue("gap", 55, 0);
         align-items: center;
         background: #FFFEFE;
@@ -56,6 +57,7 @@
     // .category__img
 
     &__img {
+        @include adaptiveValue("height", 170, 120);
         @include adaptiveValue("padding-top", 35, 0);
         @include adaptiveValue("padding-bottom", 35, 0);
     }

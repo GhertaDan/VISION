@@ -32,6 +32,10 @@
         font-weight: 400;
         margin-bottom: rem(24);
 
+        @media (max-width:$tablet) {
+            line-height: 20px;
+        }
+
         &-delivery {
             margin-bottom: rem(12);
 

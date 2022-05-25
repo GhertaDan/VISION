@@ -1,21 +1,17 @@
 .product {
     margin: 42px auto 62px auto;
-    padding: 0 136px;
 
     &__container {
         padding: 0;
     }
 
     &__wrapper {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        column-gap: 80px;
-    }
+        display: flex;
+        @include adaptiveValue("gap", 80, 0);
+        justify-content: space-evenly;
 
-    &__block {
-        &-img {
-            width: rem(300);
-
+        @media (max-width:$tablet) {
+            flex-wrap: wrap;
         }
     }
 
@@ -60,11 +56,15 @@
         }
 
         &-text {
-            @include adaptiveValue("width", 770, 500);
+            @include adaptiveValue("width", 770, 400);
             margin-top: 25px;
             line-height: 18px;
             font-weight: 500;
             font-size: rem(14);
+
+            @media (max-width:$mobile) {
+                width: 100%;
+            }
         }
     }
 
@@ -78,10 +78,15 @@
 
     &__info {
         margin-top: 32px;
+        padding: 0 20px;
 
         &-wrapper {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+
+            @media (max-width:$mobile) {
+                display: block;
+            }
         }
 
         &-subtitle {
@@ -94,6 +99,8 @@
             margin-top: 20px;
             display: flex;
             gap: 40px;
+
+            @media (max-width:$mobile) {}
         }
 
         &-title {
@@ -106,21 +113,38 @@
         }
     }
 
+    &__block {
+        @media (max-width:$mobile) {
+            max-width: 100%;
+            padding: 0 20px;
+        }
+    }
+
     &__img {
         background-color: #fff;
-        width: 300px;
+        @include adaptiveValue("width", 300, 180);
         height: 300px;
         padding: 100px 15px;
         box-shadow: 0 6px 4px 0 rgba(0, 0, 0, 0.2),
             2px 0 4px 0 rgba(0, 0, 0, 0.2),
             -2px 0 4px 0 rgba(0, 0, 0, 0.2);
+        @include adaptiveValue("height", 300, 180);
+
+        @media (max-width:$tablet) {
+            width: 320px;
+            height: 320px;
+        }
+
+        img {
+            width: 100%;
+        }
 
         &-container {
             margin-top: 15px;
             display: flex;
             justify-content: center;
             gap: 20px;
-            width: 300px;
+            width: 100%;
         }
 
         &_small {
