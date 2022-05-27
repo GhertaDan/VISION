@@ -131,7 +131,7 @@
 
     &__qnt {
         width: min-content;
-
+        flex: 0 0 190px;
 
         &-number {
             @include adaptiveValue("font-size", 18, 14);

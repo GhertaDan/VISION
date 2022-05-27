@@ -6,10 +6,11 @@ if (window.location.href.includes('cart.html')) {
 	let promoCode = 'BR3886T';
 	let discount = null;
 
-	let render = document.getElementById("render");
 
 	let cartSubtotal = document.getElementById("cartSubtotal");
 	let cartTotal = document.getElementById("cartTotal");
+
+	let render = document.getElementById("render");
 
 	function renderCart() {
 		render.innerHTML = '';
@@ -62,7 +63,6 @@ if (window.location.href.includes('cart.html')) {
 
 			return `$${(6 - discount + totalCount).toFixed(2)}`
 
-			// return `$${(6 + totalCount).toFixed(2)}`;
 		}, 0)
 
 		cartDiscount.forEach(el => {
@@ -81,22 +81,8 @@ if (window.location.href.includes('cart.html')) {
 
 	renderCart();
 
-	// cartDiscount.forEach(el => {
-	// 	el.style.display = "none"
-	// 	applyCode.addEventListener("click", e => {
-	// 		if ((cartTotalInput) == promoCode) {
-	// 			discount = 10;
-	// 			el.style.display = "block";
-	// 		} else el.style.display = "none";
-	// 		e.preventDefault();
-	// 		cartDiscount();
-	// 	})
-	// });
 	let cartItems = document.querySelectorAll(".cart__wrapper");
 	cartItems.forEach((el, idx) => {
-		// console.log(el.childNodes[1].childNodes[1].childNodes[3].childNodes[1].childNodes[5].childNodes[1]);
-
-		// console.log(el.childNodes[1].childNodes[1].childNodes[3].childNodes[1].childNodes[5].childNodes[1]);
 		el.childNodes[1].childNodes[1].childNodes[3].childNodes[1].childNodes[5].childNodes[1].addEventListener("click", e => {
 			let cart = JSON.parse(localStorage.getItem('cart')) || [];
 			cart.splice(idx, 1);
@@ -115,8 +101,6 @@ if (window.location.href.includes('cart.html')) {
 	const cartTotalCheckout = document.querySelector(".cart__total-checkout");
 
 	cartTotalCheckout.addEventListener('click', () => {
-		// cart.classList.add("page-active")
-		// pageContainer.classList.add("extended")
 		sideMenu.classList.add("side-menu_active")
 		document.body.classList.add("checkout-open")
 		document.querySelector(".overlay").classList.add("block")
@@ -138,9 +122,6 @@ if (window.location.href.includes('cart.html')) {
 		document.body.classList.remove("checkout-open")
 		document.querySelector(".overlay").classList.remove("block")
 	})
-
-	let arr = [1, 2, 3, "abc"];
-	console.log(JSON.stringify(arr));
 
 }
 import Swal from 'sweetalert2';

@@ -10,7 +10,6 @@ if (window.location.href.includes('product.html')) {
     imgSmall.forEach(el => {
         el.addEventListener("click", e => {
             if (e.target.classList[0]) {
-                // console.log(e.target.children[0]);
                 changeImg(e.target.children[0])
 
             } else changeImg(e.target);
