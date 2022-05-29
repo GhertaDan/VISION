@@ -5,6 +5,6 @@ if (window.location.href.includes("profile.html")) {
         window.onbeforeunload = function () {
             localStorage.removeItem("activeUser");
         }
-        window.location.href = "home.html";
+        window.location.href = "index.html";
     })
 }

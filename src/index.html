@@ -1,179 +1,369 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Верстка «NEW_PROJECT_NAME»</title>
-</head>
+<html lang="en">
+@@include('/html/_head.htm',{
+"title":"VISION"
+})
 
 <body>
-	<div class="rootpage">
-		<h1>Верстка «NEW_PROJECT_NAME»</h1>
-		<div class="rootpage__info">
-			Особенности проекта
-		</div>
-		<h2>Готовые страницы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Главная</a></li>
-		</ol>
-		<h2>Попапы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html#"></a></li>
-		</ol>
-		<div class="rootpage__tnx">
-			<h2>Спасибо за заказ!</h2>
-			<p>Буду рад (а) хорошему отзыву.</p>
-			<p>Обращайтесь еще!</p>
-		</div>
-		<div class="rootpage__contacts">
-			<h2>Мои контакты:</h2>
-			<p>Почта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-			<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-			<p>Соц. сеть: <a href="">ссылка на соц. сеть</a></p>
-		</div>
+
+	<!-- <div id="preloader">Hello darkness</div> -->
+
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<div class="page__container">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="img/carousel/cat.png" alt="">
+							<h1>Glasses for everybody</h1>
+							<h3>get 15% discount!</h3>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/carousel/woman.png" alt="">
+							<div>
+								<p>
+									“Fashion is what you buy.
+								</p>
+								<p>
+									<span>style</span> is what you do with it”.
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/carousel/aviator.png" alt="">
+							<img src="img/carousel//ray-ban.png" alt="" id="logo">
+						</div>
+						<div class="swiper-slide">
+							<img src="img/carousel/darkness.png" alt="">
+							<div>
+								<h3>up to 30% off</h3>
+								<h2>For specially-abled people</h2>
+								<h3>only in vison</h3>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+				<div class="glasses">
+					<div class="glasses__title">Sunglasses</div>
+					<div class="glasses__wrapper">
+						<div class="glasses__card card">
+							<div class="card__img">
+								<img src="../img/sunglasses/sun1 1.png" alt="">
+							</div>
+							<div class="card__descr">
+								<div class="card__model">Premium Square Sunglasses </div>
+								<div class="card__price">
+									$32.95
+								</div>
+							</div>
+							<div class="card__button">
+								<div class="card__favorite">
+									<img src="img/icons/favorite.png" alt="favorite" class="card__icon">
+								</div>
+								<div class="card__add">
+									<svg width="31" height="27" viewBox="0 0 31 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.18688 0C5.80822 0 6.34312 0.431895 6.46199 1.02885L6.54303 1.6875H29.2735C30.3703 1.6875 31.2455 2.75537 30.9376 3.83168L28.02 13.9588C27.8092 14.6865 27.1285 15.1875 26.3558 15.1875H9.22292L9.72 17.7188H26.3666C27.0852 17.7188 27.6634 18.283 27.6634 18.9844C27.6634 19.6857 27.0852 20.25 26.3666 20.25H8.59617C8.02345 20.25 7.48856 19.8176 7.36969 19.2217L4.11384 2.53125H1.29672C0.580822 2.53125 0 1.96436 0 1.26562C0 0.566895 0.580822 0 1.29672 0H5.18688ZM6.91584 24.4688C6.91584 23.0713 8.07748 21.9375 9.50928 21.9375C10.9411 21.9375 12.1027 23.0713 12.1027 24.4688C12.1027 25.8662 10.9411 27 9.50928 27C8.07748 27 6.91584 25.8662 6.91584 24.4688ZM27.6634 24.4688C27.6634 25.8662 26.5017 27 25.0699 27C23.6381 27 22.4765 25.8662 22.4765 24.4688C22.4765 23.0713 23.6381 21.9375 25.0699 21.9375C26.5017 21.9375 27.6634 23.0713 27.6634 24.4688Z"
+											fill="#fff" />
+									</svg>
+									<p>add to cart</p>
+								</div>
+							</div>
+						</div>
+						<div class="glasses__card card">
+							<div class="card__img">
+								<img src="img/sunglasses/sun2 1.png" alt="">
+							</div>
+							<div class="card__descr">
+								<div class="card__model">Premium Square Sunglasses </div>
+								<div class="card__price">
+									$32.95
+								</div>
+							</div>
+							<div class="card__button">
+								<div class="card__favorite">
+									<img src="img/icons/favorite.png" alt="favorite" class="card__icon">
+								</div>
+								<div class="card__add">
+									<svg width="31" height="27" viewBox="0 0 31 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.18688 0C5.80822 0 6.34312 0.431895 6.46199 1.02885L6.54303 1.6875H29.2735C30.3703 1.6875 31.2455 2.75537 30.9376 3.83168L28.02 13.9588C27.8092 14.6865 27.1285 15.1875 26.3558 15.1875H9.22292L9.72 17.7188H26.3666C27.0852 17.7188 27.6634 18.283 27.6634 18.9844C27.6634 19.6857 27.0852 20.25 26.3666 20.25H8.59617C8.02345 20.25 7.48856 19.8176 7.36969 19.2217L4.11384 2.53125H1.29672C0.580822 2.53125 0 1.96436 0 1.26562C0 0.566895 0.580822 0 1.29672 0H5.18688ZM6.91584 24.4688C6.91584 23.0713 8.07748 21.9375 9.50928 21.9375C10.9411 21.9375 12.1027 23.0713 12.1027 24.4688C12.1027 25.8662 10.9411 27 9.50928 27C8.07748 27 6.91584 25.8662 6.91584 24.4688ZM27.6634 24.4688C27.6634 25.8662 26.5017 27 25.0699 27C23.6381 27 22.4765 25.8662 22.4765 24.4688C22.4765 23.0713 23.6381 21.9375 25.0699 21.9375C26.5017 21.9375 27.6634 23.0713 27.6634 24.4688Z"
+											fill="#fff" />
+									</svg>
+									<p>add to cart</p>
+								</div>
+							</div>
+						</div>
+						<div class="glasses__card card">
+							<div class="card__img">
+								<img src="img/sunglasses/sun3 1.png" alt="">
+							</div>
+							<div class="card__descr">
+								<div class="card__model">Premium Square Sunglasses </div>
+								<div class="card__price">
+									$32.95
+								</div>
+							</div>
+							<div class="card__button">
+								<div class="card__favorite">
+									<img src="img/icons/favorite.png" alt="favorite" class="card__icon">
+								</div>
+								<div class="card__add">
+									<svg width="31" height="27" viewBox="0 0 31 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.18688 0C5.80822 0 6.34312 0.431895 6.46199 1.02885L6.54303 1.6875H29.2735C30.3703 1.6875 31.2455 2.75537 30.9376 3.83168L28.02 13.9588C27.8092 14.6865 27.1285 15.1875 26.3558 15.1875H9.22292L9.72 17.7188H26.3666C27.0852 17.7188 27.6634 18.283 27.6634 18.9844C27.6634 19.6857 27.0852 20.25 26.3666 20.25H8.59617C8.02345 20.25 7.48856 19.8176 7.36969 19.2217L4.11384 2.53125H1.29672C0.580822 2.53125 0 1.96436 0 1.26562C0 0.566895 0.580822 0 1.29672 0H5.18688ZM6.91584 24.4688C6.91584 23.0713 8.07748 21.9375 9.50928 21.9375C10.9411 21.9375 12.1027 23.0713 12.1027 24.4688C12.1027 25.8662 10.9411 27 9.50928 27C8.07748 27 6.91584 25.8662 6.91584 24.4688ZM27.6634 24.4688C27.6634 25.8662 26.5017 27 25.0699 27C23.6381 27 22.4765 25.8662 22.4765 24.4688C22.4765 23.0713 23.6381 21.9375 25.0699 21.9375C26.5017 21.9375 27.6634 23.0713 27.6634 24.4688Z"
+											fill="#fff" />
+									</svg>
+									<p>add to cart</p>
+								</div>
+							</div>
+						</div>
+						<div class="glasses__card card">
+							<div class="card__img">
+								<img src="img/sunglasses/sun4 1.png" alt="">
+							</div>
+							<div class="card__descr">
+								<div class="card__model">Premium Square Sunglasses </div>
+								<div class="card__price">
+									$32.95
+								</div>
+							</div>
+							<div class="card__button">
+								<div class="card__favorite">
+									<img src="img/icons/favorite.png" alt="favorite" class="card__icon">
+								</div>
+								<div class="card__add">
+									<svg width="31" height="27" viewBox="0 0 31 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.18688 0C5.80822 0 6.34312 0.431895 6.46199 1.02885L6.54303 1.6875H29.2735C30.3703 1.6875 31.2455 2.75537 30.9376 3.83168L28.02 13.9588C27.8092 14.6865 27.1285 15.1875 26.3558 15.1875H9.22292L9.72 17.7188H26.3666C27.0852 17.7188 27.6634 18.283 27.6634 18.9844C27.6634 19.6857 27.0852 20.25 26.3666 20.25H8.59617C8.02345 20.25 7.48856 19.8176 7.36969 19.2217L4.11384 2.53125H1.29672C0.580822 2.53125 0 1.96436 0 1.26562C0 0.566895 0.580822 0 1.29672 0H5.18688ZM6.91584 24.4688C6.91584 23.0713 8.07748 21.9375 9.50928 21.9375C10.9411 21.9375 12.1027 23.0713 12.1027 24.4688C12.1027 25.8662 10.9411 27 9.50928 27C8.07748 27 6.91584 25.8662 6.91584 24.4688ZM27.6634 24.4688C27.6634 25.8662 26.5017 27 25.0699 27C23.6381 27 22.4765 25.8662 22.4765 24.4688C22.4765 23.0713 23.6381 21.9375 25.0699 21.9375C26.5017 21.9375 27.6634 23.0713 27.6634 24.4688Z"
+											fill="#fff" />
+									</svg>
+									<p>add to cart</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="glasses__title">PRESCRIPTION FRAMES</div>
+					<div class="glasses__wrapper">
+						<div class="glasses__card card">
+							<div class="card__img">
+								<img src="img/sunglasses/1 2.png" alt="">
+							</div>
+							<div class="card__descr">
+								<div class="card__model">Premium Square Sunglasses </div>
+								<div class="card__price">
+									$32.95
+								</div>
+							</div>
+							<div class="card__button">
+								<div class="card__favorite">
+									<img src="img/icons/favorite.png" alt="favorite" class="card__icon">
+								</div>
+								<div class="card__add">
+									<svg width="31" height="27" viewBox="0 0 31 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.18688 0C5.80822 0 6.34312 0.431895 6.46199 1.02885L6.54303 1.6875H29.2735C30.3703 1.6875 31.2455 2.75537 30.9376 3.83168L28.02 13.9588C27.8092 14.6865 27.1285 15.1875 26.3558 15.1875H9.22292L9.72 17.7188H26.3666C27.0852 17.7188 27.6634 18.283 27.6634 18.9844C27.6634 19.6857 27.0852 20.25 26.3666 20.25H8.59617C8.02345 20.25 7.48856 19.8176 7.36969 19.2217L4.11384 2.53125H1.29672C0.580822 2.53125 0 1.96436 0 1.26562C0 0.566895 0.580822 0 1.29672 0H5.18688ZM6.91584 24.4688C6.91584 23.0713 8.07748 21.9375 9.50928 21.9375C10.9411 21.9375 12.1027 23.0713 12.1027 24.4688C12.1027 25.8662 10.9411 27 9.50928 27C8.07748 27 6.91584 25.8662 6.91584 24.4688ZM27.6634 24.4688C27.6634 25.8662 26.5017 27 25.0699 27C23.6381 27 22.4765 25.8662 22.4765 24.4688C22.4765 23.0713 23.6381 21.9375 25.0699 21.9375C26.5017 21.9375 27.6634 23.0713 27.6634 24.4688Z"
+											fill="#fff" />
+									</svg>
+									<p>add to cart</p>
+								</div>
+							</div>
+						</div>
+						<div class="glasses__card card">
+							<div class="card__img">
+								<img src="img/sunglasses/2 2.png" alt="">
+							</div>
+							<div class="card__descr">
+								<div class="card__model">Premium Square Sunglasses </div>
+								<div class="card__price">
+									$32.95
+								</div>
+							</div>
+							<div class="card__button">
+								<div class="card__favorite">
+									<img src="img/icons/favorite.png" alt="favorite" class="card__icon">
+								</div>
+								<div class="card__add">
+									<svg width="31" height="27" viewBox="0 0 31 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.18688 0C5.80822 0 6.34312 0.431895 6.46199 1.02885L6.54303 1.6875H29.2735C30.3703 1.6875 31.2455 2.75537 30.9376 3.83168L28.02 13.9588C27.8092 14.6865 27.1285 15.1875 26.3558 15.1875H9.22292L9.72 17.7188H26.3666C27.0852 17.7188 27.6634 18.283 27.6634 18.9844C27.6634 19.6857 27.0852 20.25 26.3666 20.25H8.59617C8.02345 20.25 7.48856 19.8176 7.36969 19.2217L4.11384 2.53125H1.29672C0.580822 2.53125 0 1.96436 0 1.26562C0 0.566895 0.580822 0 1.29672 0H5.18688ZM6.91584 24.4688C6.91584 23.0713 8.07748 21.9375 9.50928 21.9375C10.9411 21.9375 12.1027 23.0713 12.1027 24.4688C12.1027 25.8662 10.9411 27 9.50928 27C8.07748 27 6.91584 25.8662 6.91584 24.4688ZM27.6634 24.4688C27.6634 25.8662 26.5017 27 25.0699 27C23.6381 27 22.4765 25.8662 22.4765 24.4688C22.4765 23.0713 23.6381 21.9375 25.0699 21.9375C26.5017 21.9375 27.6634 23.0713 27.6634 24.4688Z"
+											fill="#fff" />
+									</svg>
+									<p>add to cart</p>
+								</div>
+							</div>
+						</div>
+						<div class="glasses__card card">
+							<div class="card__img">
+								<img src="img/sunglasses/3 2.png" alt="">
+							</div>
+							<div class="card__descr">
+								<div class="card__model">Premium Square Sunglasses </div>
+								<div class="card__price">
+									$32.95
+								</div>
+							</div>
+							<div class="card__button">
+								<div class="card__favorite">
+									<img src="img/icons/favorite.png" alt="favorite" class="card__icon">
+								</div>
+								<div class="card__add">
+									<svg width="31" height="27" viewBox="0 0 31 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.18688 0C5.80822 0 6.34312 0.431895 6.46199 1.02885L6.54303 1.6875H29.2735C30.3703 1.6875 31.2455 2.75537 30.9376 3.83168L28.02 13.9588C27.8092 14.6865 27.1285 15.1875 26.3558 15.1875H9.22292L9.72 17.7188H26.3666C27.0852 17.7188 27.6634 18.283 27.6634 18.9844C27.6634 19.6857 27.0852 20.25 26.3666 20.25H8.59617C8.02345 20.25 7.48856 19.8176 7.36969 19.2217L4.11384 2.53125H1.29672C0.580822 2.53125 0 1.96436 0 1.26562C0 0.566895 0.580822 0 1.29672 0H5.18688ZM6.91584 24.4688C6.91584 23.0713 8.07748 21.9375 9.50928 21.9375C10.9411 21.9375 12.1027 23.0713 12.1027 24.4688C12.1027 25.8662 10.9411 27 9.50928 27C8.07748 27 6.91584 25.8662 6.91584 24.4688ZM27.6634 24.4688C27.6634 25.8662 26.5017 27 25.0699 27C23.6381 27 22.4765 25.8662 22.4765 24.4688C22.4765 23.0713 23.6381 21.9375 25.0699 21.9375C26.5017 21.9375 27.6634 23.0713 27.6634 24.4688Z"
+											fill="#fff" />
+									</svg>
+									<p>add to cart</p>
+								</div>
+							</div>
+						</div>
+						<div class="glasses__card card">
+							<div class="card__img">
+								<img src="img/sunglasses/4 2.png" alt="">
+							</div>
+							<div class="card__descr">
+								<div class="card__model">Premium Square Sunglasses </div>
+								<div class="card__price">
+									$32.95
+								</div>
+							</div>
+							<div class="card__button">
+								<div class="card__favorite">
+									<img src="img/icons/favorite.png" alt="favorite" class="card__icon">
+								</div>
+								<div class="card__add">
+									<svg width="31" height="27" viewBox="0 0 31 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.18688 0C5.80822 0 6.34312 0.431895 6.46199 1.02885L6.54303 1.6875H29.2735C30.3703 1.6875 31.2455 2.75537 30.9376 3.83168L28.02 13.9588C27.8092 14.6865 27.1285 15.1875 26.3558 15.1875H9.22292L9.72 17.7188H26.3666C27.0852 17.7188 27.6634 18.283 27.6634 18.9844C27.6634 19.6857 27.0852 20.25 26.3666 20.25H8.59617C8.02345 20.25 7.48856 19.8176 7.36969 19.2217L4.11384 2.53125H1.29672C0.580822 2.53125 0 1.96436 0 1.26562C0 0.566895 0.580822 0 1.29672 0H5.18688ZM6.91584 24.4688C6.91584 23.0713 8.07748 21.9375 9.50928 21.9375C10.9411 21.9375 12.1027 23.0713 12.1027 24.4688C12.1027 25.8662 10.9411 27 9.50928 27C8.07748 27 6.91584 25.8662 6.91584 24.4688ZM27.6634 24.4688C27.6634 25.8662 26.5017 27 25.0699 27C23.6381 27 22.4765 25.8662 22.4765 24.4688C22.4765 23.0713 23.6381 21.9375 25.0699 21.9375C26.5017 21.9375 27.6634 23.0713 27.6634 24.4688Z"
+											fill="#fff" />
+									</svg>
+									<p>add to cart</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="glasses__title">Protective eyeware</div>
+					<div class="glasses__wrapper">
+						<div class="glasses__card card">
+							<div class="card__img">
+								<img src="img/sunglasses/1 1.png" alt="">
+							</div>
+							<div class="card__descr">
+								<div class="card__model">Premium Square Sunglasses </div>
+								<div class="card__price">
+									$32.95
+								</div>
+							</div>
+							<div class="card__button">
+								<div class="card__favorite">
+									<img src="img/icons/favorite.png" alt="favorite" class="card__icon">
+								</div>
+								<div class="card__add">
+									<svg width="31" height="27" viewBox="0 0 31 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.18688 0C5.80822 0 6.34312 0.431895 6.46199 1.02885L6.54303 1.6875H29.2735C30.3703 1.6875 31.2455 2.75537 30.9376 3.83168L28.02 13.9588C27.8092 14.6865 27.1285 15.1875 26.3558 15.1875H9.22292L9.72 17.7188H26.3666C27.0852 17.7188 27.6634 18.283 27.6634 18.9844C27.6634 19.6857 27.0852 20.25 26.3666 20.25H8.59617C8.02345 20.25 7.48856 19.8176 7.36969 19.2217L4.11384 2.53125H1.29672C0.580822 2.53125 0 1.96436 0 1.26562C0 0.566895 0.580822 0 1.29672 0H5.18688ZM6.91584 24.4688C6.91584 23.0713 8.07748 21.9375 9.50928 21.9375C10.9411 21.9375 12.1027 23.0713 12.1027 24.4688C12.1027 25.8662 10.9411 27 9.50928 27C8.07748 27 6.91584 25.8662 6.91584 24.4688ZM27.6634 24.4688C27.6634 25.8662 26.5017 27 25.0699 27C23.6381 27 22.4765 25.8662 22.4765 24.4688C22.4765 23.0713 23.6381 21.9375 25.0699 21.9375C26.5017 21.9375 27.6634 23.0713 27.6634 24.4688Z"
+											fill="#fff" />
+									</svg>
+									<p>add to cart</p>
+								</div>
+							</div>
+						</div>
+						<div class="glasses__card card">
+							<div class="card__img">
+								<img src="img/sunglasses/2 1.png" alt="">
+							</div>
+							<div class="card__descr">
+								<div class="card__model">Premium Square Sunglasses </div>
+								<div class="card__price">
+									$32.95
+								</div>
+							</div>
+							<div class="card__button">
+								<div class="card__favorite">
+									<img src="img/icons/favorite.png" alt="favorite" class="card__icon">
+								</div>
+								<div class="card__add">
+									<svg width="31" height="27" viewBox="0 0 31 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.18688 0C5.80822 0 6.34312 0.431895 6.46199 1.02885L6.54303 1.6875H29.2735C30.3703 1.6875 31.2455 2.75537 30.9376 3.83168L28.02 13.9588C27.8092 14.6865 27.1285 15.1875 26.3558 15.1875H9.22292L9.72 17.7188H26.3666C27.0852 17.7188 27.6634 18.283 27.6634 18.9844C27.6634 19.6857 27.0852 20.25 26.3666 20.25H8.59617C8.02345 20.25 7.48856 19.8176 7.36969 19.2217L4.11384 2.53125H1.29672C0.580822 2.53125 0 1.96436 0 1.26562C0 0.566895 0.580822 0 1.29672 0H5.18688ZM6.91584 24.4688C6.91584 23.0713 8.07748 21.9375 9.50928 21.9375C10.9411 21.9375 12.1027 23.0713 12.1027 24.4688C12.1027 25.8662 10.9411 27 9.50928 27C8.07748 27 6.91584 25.8662 6.91584 24.4688ZM27.6634 24.4688C27.6634 25.8662 26.5017 27 25.0699 27C23.6381 27 22.4765 25.8662 22.4765 24.4688C22.4765 23.0713 23.6381 21.9375 25.0699 21.9375C26.5017 21.9375 27.6634 23.0713 27.6634 24.4688Z"
+											fill="#fff" />
+									</svg>
+									<p>add to cart</p>
+								</div>
+							</div>
+						</div>
+						<div class="glasses__card card">
+							<div class="card__img">
+								<img src="img/sunglasses/3 1.png" alt="">
+							</div>
+							<div class="card__descr">
+								<div class="card__model">Premium Square Sunglasses </div>
+								<div class="card__price">
+									$32.95
+								</div>
+							</div>
+							<div class="card__button">
+								<div class="card__favorite">
+									<img src="img/icons/favorite.png" alt="favorite" class="card__icon">
+								</div>
+								<div class="card__add">
+									<svg width="31" height="27" viewBox="0 0 31 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.18688 0C5.80822 0 6.34312 0.431895 6.46199 1.02885L6.54303 1.6875H29.2735C30.3703 1.6875 31.2455 2.75537 30.9376 3.83168L28.02 13.9588C27.8092 14.6865 27.1285 15.1875 26.3558 15.1875H9.22292L9.72 17.7188H26.3666C27.0852 17.7188 27.6634 18.283 27.6634 18.9844C27.6634 19.6857 27.0852 20.25 26.3666 20.25H8.59617C8.02345 20.25 7.48856 19.8176 7.36969 19.2217L4.11384 2.53125H1.29672C0.580822 2.53125 0 1.96436 0 1.26562C0 0.566895 0.580822 0 1.29672 0H5.18688ZM6.91584 24.4688C6.91584 23.0713 8.07748 21.9375 9.50928 21.9375C10.9411 21.9375 12.1027 23.0713 12.1027 24.4688C12.1027 25.8662 10.9411 27 9.50928 27C8.07748 27 6.91584 25.8662 6.91584 24.4688ZM27.6634 24.4688C27.6634 25.8662 26.5017 27 25.0699 27C23.6381 27 22.4765 25.8662 22.4765 24.4688C22.4765 23.0713 23.6381 21.9375 25.0699 21.9375C26.5017 21.9375 27.6634 23.0713 27.6634 24.4688Z"
+											fill="#fff" />
+									</svg>
+									<p>add to cart</p>
+								</div>
+							</div>
+						</div>
+						<div class="glasses__card card">
+							<div class="card__img">
+								<img src="img/sunglasses/4 1.png" alt="">
+							</div>
+							<div class="card__descr">
+								<div class="card__model">Premium Square Sunglasses </div>
+								<div class="card__price">
+									$32.95
+								</div>
+							</div>
+							<div class="card__button">
+								<div class="card__favorite">
+									<img src="img/icons/favorite.png" alt="favorite" class="card__icon">
+								</div>
+								<div class="card__add">
+									<svg width="31" height="27" viewBox="0 0 31 27" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.18688 0C5.80822 0 6.34312 0.431895 6.46199 1.02885L6.54303 1.6875H29.2735C30.3703 1.6875 31.2455 2.75537 30.9376 3.83168L28.02 13.9588C27.8092 14.6865 27.1285 15.1875 26.3558 15.1875H9.22292L9.72 17.7188H26.3666C27.0852 17.7188 27.6634 18.283 27.6634 18.9844C27.6634 19.6857 27.0852 20.25 26.3666 20.25H8.59617C8.02345 20.25 7.48856 19.8176 7.36969 19.2217L4.11384 2.53125H1.29672C0.580822 2.53125 0 1.96436 0 1.26562C0 0.566895 0.580822 0 1.29672 0H5.18688ZM6.91584 24.4688C6.91584 23.0713 8.07748 21.9375 9.50928 21.9375C10.9411 21.9375 12.1027 23.0713 12.1027 24.4688C12.1027 25.8662 10.9411 27 9.50928 27C8.07748 27 6.91584 25.8662 6.91584 24.4688ZM27.6634 24.4688C27.6634 25.8662 26.5017 27 25.0699 27C23.6381 27 22.4765 25.8662 22.4765 24.4688C22.4765 23.0713 23.6381 21.9375 25.0699 21.9375C26.5017 21.9375 27.6634 23.0713 27.6634 24.4688Z"
+											fill="#fff" />
+									</svg>
+									<p>add to cart</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</main>
+		@@include('html/_footer.htm',{})
 	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
 </body>
-<style>
-	@charset "UTF-8";
-	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-
-	*,
-	*::before,
-	*::after {
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		box-sizing: border-box;
-	}
-
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		min-width: 320px;
-		width: 100%;
-		color: #fff;
-		background-color: #5e5373;
-	}
-
-	body {
-		font-family: Montserrat;
-		font-size: 100%;
-		line-height: 1;
-		font-size: 1rem;
-	}
-
-	a {
-		text-decoration: underline;
-		color: #ebe691
-	}
-
-	a:visited {
-		text-decoration: underline;
-		color: #aaa768;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	img {
-		vertical-align: top;
-	}
-
-	.wrapper {
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-	}
-
-	.rootpage {
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	@media (max-width: 767px) {
-		.rootpage {
-			padding: 30px 15px;
-		}
-	}
-
-	h1 {
-		color: #ebe691;
-		font-size: 2.5rem;
-		margin: 0px 0px 1.25rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h1 {
-			font-size: 1.85rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-	}
-
-	h2 {
-		color: #ebe691;
-		font-size: 1.25rem;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h2 {
-			font-size: 1.125rem;
-			margin: 0px 0px 1rem 0px;
-		}
-	}
-
-	.rootpage__info {
-		line-height: 140%;
-		margin: 0px 0px 1.5rem 0px;
-	}
-
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
-	}
-
-	.rootpage__list li:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-	}
-
-	.rootpage__contacts,
-	.rootpage__tnx {
-		border-radius: 200px;
-		padding: 20px 65px;
-		line-height: 140%;
-	}
-
-	@media (max-width: 767px) {
-
-		.rootpage__contacts,
-		.rootpage__tnx {
-			border-radius: 40px;
-			padding: 20px;
-		}
-	}
-
-	.rootpage__contacts {
-		background: #32b5a4;
-
-	}
-
-	.rootpage__contacts a {
-		color: #ebe691;
-	}
-
-	.rootpage__tnx {
-		background: #c22d63;
-		margin: 0px 0px 1rem 0px;
-	}
-</style>
 
 </html>

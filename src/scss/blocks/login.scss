@@ -8,6 +8,10 @@
     display: flex;
 
     @media (max-width:$tablet) {
+        max-width: 767px;
+        margin-top: rem(70);
+        margin-bottom: rem(70);
+
         &__logo {
             text-align: center;
         }
@@ -29,8 +33,8 @@
     &__logo {
         font-weight: 700;
         font-size: rem(24);
-        line-height: math.div(110, 60);
-        margin-left: rem(31);
+        line-height: math.div(110, 65);
+        text-align: center;
     }
 
     &__wrapper {
@@ -39,13 +43,32 @@
         height: 650px;
         border-radius: 10px;
         padding: rem(70) 0 rem(100) 0;
+
+        @media (max-width:$mobile) {
+            padding: rem(35) 0 0 0;
+            height: rem(600);
+        }
+
+        @media (max-width:$mobileSmall) {
+            padding: rem(30) 0;
+            height: max-content;
+        }
     }
 
     p {
-        margin-top: rem(35);
+        margin-top: rem(40);
         text-align: center;
         color: #A6A0A0;
         font-weight: 400;
+
+        @media (max-width:$mobileSmall) {
+            margin-top: 30px;
+        }
+    }
+
+    @media (max-width:$mobileSmall) {
+        margin-top: 20px;
+        font-size: rem(14);
     }
 
     a {
@@ -56,15 +79,27 @@
         margin-left: rem(51);
         color: #A6A0A0;
         font-weight: 400;
+
+        @media (max-width:$tablet) {
+            margin: 10px auto 0 auto;
+        }
     }
 
     &__name {
-        font-size: rem(24);
+        @include adaptiveValue("font-size", 24, 18);
         font-weight: 500;
         text-transform: uppercase;
         margin-top: rem(120);
         margin-left: rem(50);
         margin-bottom: rem(25);
+
+        @media (max-width:$tablet) {
+            margin: rem(100) auto 0 auto;
+        }
+
+        @media (max-width:$mobile) {
+            margin: rem(60) auto 0 auto;
+        }
     }
 
     &__btn {
@@ -76,27 +111,44 @@
         border-radius: 15px;
         width: 400px;
         padding: rem(8) 0;
-    }
 
-    #formLogin {
-        display: block;
-        margin: 0 auto;
+        @media (max-width:$mobile) {
+            width: 255px;
+            padding: rem(8) 0;
+        }
+
+        @media (max-width:$mobileSmall) {
+            width: rem(200);
+        }
     }
 
     form {
+        max-width: 520px;
+        display: block;
+        margin: 0 auto;
+
+        @media (max-width:$mobile) {
+            max-width: 400px;
+        }
+
+        @media (max-width:$mobileSmall) {
+            padding: 0 20px;
+        }
+
         .form-group {
-            width: 520px;
+            // width: 100%;
             padding-left: rem(51);
             margin-top: 30px;
 
             div {
+                width: 90%;
                 display: flex;
                 flex-direction: column;
 
                 input {
                     border-bottom: 1px solid #1687F7;
                     color: #57C3F9;
-                    width: 415px;
+                    width: 100%;
                     padding: 8px 0 4px 0;
 
                     font: {

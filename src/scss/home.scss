@@ -38,21 +38,21 @@
     &:first-child {
         h1 {
             position: absolute;
-            top: 50px;
+            @include adaptiveValue("top", 50, 35);
             left: 50%;
             transform: translateX(-50%);
-            @include adaptiveValue("font-size", 40, 16);
+            @include adaptiveValue("font-size", 40, 12);
             font-weight: 700;
             color: #fff;
         }
 
         h3 {
             position: absolute;
-            @include adaptiveValue("top", 90, 70);
+            @include adaptiveValue("top", 90, 50);
             left: 50%;
             transform: translateX(-50%);
             color: #fff;
-            @include adaptiveValue("font-size", 36, 14);
+            @include adaptiveValue("font-size", 36, 12);
             font-weight: 700;
 
         }
@@ -93,21 +93,21 @@
     &:last-child {
         div {
             position: absolute;
-            @include adaptiveValue("bottom", 270, 10);
-            left: 60px;
+            @include adaptiveValue("bottom", 270, 45);
+            @include adaptiveValue("left", 60, 30);
             color: #fff;
 
             h3 {
                 text-transform: uppercase;
                 font-family: Mitr;
-                @include adaptiveValue("font-size", 36, 14);
+                @include adaptiveValue("font-size", 36, 12);
                 margin-bottom: 10px;
             }
 
             h2 {
                 text-transform: uppercase;
                 font-family: Mitr;
-                @include adaptiveValue("font-size", 48, 20);
+                @include adaptiveValue("font-size", 48, 16);
                 margin-bottom: 10px;
             }
         }
@@ -146,7 +146,8 @@
 }
 
 .card {
-    width: rem(270);
+    @include adaptiveValue("width", 270, 200);
+    // width: rem(270);
     text-align: center;
     padding: 24px 0px 20px 0px;
     margin-bottom: rem(25);
@@ -159,8 +160,13 @@
         // margin: 35px 0 55px 0;
         cursor: pointer;
         height: 214px;
+        @include adaptiveValue("height", 214, 150);
         display: flex;
         align-items: center;
+
+        img {
+            width: 100%;
+        }
     }
 
     &__icon {

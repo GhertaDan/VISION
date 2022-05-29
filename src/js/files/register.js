@@ -18,6 +18,7 @@ if (window.location.href.includes('register.html')) {
             users.push(user)
             localStorage.setItem('users', JSON.stringify(users));
             console.log(user);
+            window.location.href = 'login.html';
         }
         e.preventDefault();
     })

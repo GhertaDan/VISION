@@ -25,7 +25,7 @@
 
 
 
-    @media (max-width:$mobileSmall) {
+    @media (max-width:$mobile) {
         .category {
             &__block {
                 display: flex;
@@ -57,6 +57,10 @@
         @include adaptiveValue("height", 170, 120);
         @include adaptiveValue("padding-top", 35, 0);
         @include adaptiveValue("padding-bottom", 35, 0);
+
+        img {
+            @include adaptiveValue("width", 270, 240);
+        }
     }
 
     // .category__name
